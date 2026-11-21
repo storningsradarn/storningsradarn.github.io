@@ -96,14 +96,14 @@ function dataStatus(){
  const m=currentBundle?.manifest,flags=m?C.staleness(m):null;
  const local=currentBundle?.manual?' · lokalt inläst fil':'';
  const badge=document.querySelector('.sample'),notice=document.querySelector('.notice');
- badge.textContent=!m?'INGA PUBLICERADE DATA':m.dataset_kind==='saved_test_data'?'● SPARADE TESTDATA · INTE LIVE':m.dataset_kind==='validation'?'● VALIDERING · INTE PILOT':'● PILOTDATA';
+ badge.textContent=!m?'INGA DATA INLÄSTA':m.dataset_kind==='saved_test_data'?'● SPARADE TESTDATA · INTE LIVE':m.dataset_kind==='validation'?'● VALIDERING · INTE PILOT':'● PILOTDATA';
  const mode=m?.dataset_kind==='saved_test_data'?'Sparade testdata – inte aktuellt driftläge. ':m?.dataset_kind==='validation'?'Manuell validering – inte startad pilot. ':'';
  const age=flags?.future?'Tidsstämpeln ligger i framtiden. ':flags?.stale?'Informationen är föråldrad. ':'';
  const health=m?.last_attempt_result==='failed'?'Senaste insamlingen misslyckades eller var ofullständig. Tidigare giltiga uppgifter ligger kvar. ':'';
- notice.textContent=mode+age+health+(loadError?(m?'Uppdateringen kunde inte läsas. Tidigare giltiga uppgifter ligger kvar. ':'Ingen giltig publicerad datafil är tillgänglig ännu. Sidan visar inget förrän en godkänd export finns. '):m?(m.snapshot?'Status är regelbaserad. Kontrollera originalkällan.':'Väntar på första godkända dataexporten. '):'Läser publicerade data …')+local;
+ notice.textContent=mode+age+health+(loadError?'Uppdateringen kunde inte läsas. Tidigare giltiga uppgifter ligger kvar. ':m?'Status är regelbaserad. Kontrollera originalkällan.':'Läser publicerade data …')+local;
  notice.dataset.stale=String(!!flags?.stale);notice.dataset.error=String(!!loadError||m?.last_attempt_result==='failed');
  $('#observed').textContent=m?.last_success_at?seenDisplay(m.last_success_at):'Ingen lyckad hämtning';
- const dataState=$('#dataState');if(dataState)dataState.textContent=loadError?'Läsfel':m?.last_attempt_result==='failed'?'Insamlingsfel':!m?'Läser data':currentBundle.manual?'Lokal fil':flags?.stale?'Föråldrad information':'Uppdaterad';
+ $('#dataState').textContent=loadError?'Läsfel':m?.last_attempt_result==='failed'?'Insamlingsfel':!m?'Läser data':currentBundle.manual?'Lokal fil':flags?.stale?'Föråldrad information':'Uppdaterad';
 }
 function applyBundle(bundle){
  currentBundle=bundle;loadError='';
@@ -127,18 +127,13 @@ function renderControl(){
 }
 function CRegistryName(id){return JSON.parse($('#public-contract').textContent)['x-source-registry'][id]?.name||id;}
 function initLive(){
- const localFile=location.protocol==='file:';
- if(localFile){
-  $('#refreshData').addEventListener('click',()=>loader?.refresh());
-  $('#loadData').addEventListener('click',()=>$('#dataImport').click());
-  $('#dataImport').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>8000000)throw Error('För stor fil.');const bundle=C.manual(JSON.parse(await file.text()));applyBundle(bundle);toast('Validerad JSON lästes in lokalt.');}catch(err){toast('Filen avvisades. Tidigare uppgifter behålls.');}finally{e.target.value='';}});
-  loadError='Lokal filöppning';dataStatus();document.querySelector('.notice').textContent='Lokal filöppning: klicka på Läs in JSON och välj Sparade-testdata.json. Automatiska uppdateringar används när sidan öppnas på GitHub Pages. Mina ärenden fungerar lokalt.';return;
- }
- // Publicerade webbplatsen har ingen filuppladdning, testpanel eller manuell refresh-knapp.
- $('#loadData')?.remove();$('#dataImport')?.remove();$('#refreshData')?.remove();$('.data-toolbar')?.remove();document.querySelector('[data-view="control"]')?.remove();
- loader=C.createLoader({onData:applyBundle,onError(error){loadError=error.message;dataStatus();}});
- loader.refresh();setInterval(()=>{if(!document.hidden)loader.refresh();dataStatus();},60000);
- document.addEventListener('visibilitychange',()=>{if(!document.hidden)loader.refresh();});
+ $('#refreshData').addEventListener('click',()=>loader?.refresh());
+ $('#loadData').addEventListener('click',()=>$('#dataImport').click());
+ $('#dataImport').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>8000000)throw Error('För stor fil.');const bundle=C.manual(JSON.parse(await file.text()));applyBundle(bundle);toast('Validerad JSON lästes in lokalt.');}catch(err){toast('Filen avvisades. Tidigare uppgifter behålls.');}finally{e.target.value='';}});
+ if(location.protocol==='file:'){loadError='Lokal filöppning';dataStatus();document.querySelector('.notice').textContent='Lokal filöppning: klicka på Läs in JSON och välj Sparade-testdata.json. Webbplatsens automatiska uppdatering används när sidan serveras via HTTP eller HTTPS. Mina ärenden fungerar lokalt.';return;}
+ loader=C.createLoader({onData:applyBundle,onError(error){loadError=error.message;dataStatus();if(view==='control')renderControl();}});
+ loader.refresh();setInterval(()=>{if(!document.hidden&&!currentBundle?.manual)loader.refresh();dataStatus();},60000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!currentBundle?.manual)loader.refresh();});
 }
 
 init();initLive();

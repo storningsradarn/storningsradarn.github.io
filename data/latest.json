@@ -1,0 +1,98 @@
+{
+  "schema": "storningsradarn.latest.v1",
+  "generated_at": "2026-11-21T22:56:12.560031+00:00",
+  "dataset_kind": "pilot",
+  "snapshot": {
+    "path": "data/snapshots/09445e87424ec83fed66756820562a8f0901529bd5d58190228218df5a5df779.json",
+    "sha256": "09445e87424ec83fed66756820562a8f0901529bd5d58190228218df5a5df779",
+    "bytes": 969251,
+    "observed_at": "2026-11-21T22:56:12.560031+00:00",
+    "summary": {
+      "accepted_count": 714,
+      "retained_missing_count": 0,
+      "status_counts": {
+        "osäker": 1,
+        "pågående": 41,
+        "historisk": 11,
+        "planerad": 12,
+        "avslutad": 649
+      },
+      "source_counts": {
+        "K020": 11,
+        "K034": 5,
+        "K036": 651,
+        "K073": 12,
+        "K117": 35
+      },
+      "change_counts": {},
+      "baseline": true,
+      "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
+    }
+  },
+  "history": [
+    {
+      "path": "data/snapshots/09445e87424ec83fed66756820562a8f0901529bd5d58190228218df5a5df779.json",
+      "sha256": "09445e87424ec83fed66756820562a8f0901529bd5d58190228218df5a5df779",
+      "bytes": 969251,
+      "observed_at": "2026-11-21T22:56:12.560031+00:00",
+      "summary": {
+        "accepted_count": 714,
+        "retained_missing_count": 0,
+        "status_counts": {
+          "osäker": 1,
+          "pågående": 41,
+          "historisk": 11,
+          "planerad": 12,
+          "avslutad": 649
+        },
+        "source_counts": {
+          "K020": 11,
+          "K034": 5,
+          "K036": 651,
+          "K073": 12,
+          "K117": 35
+        },
+        "change_counts": {},
+        "baseline": true,
+        "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
+      }
+    }
+  ],
+  "last_success_at": "2026-11-21T22:56:12.560031+00:00",
+  "last_attempt_at": "2026-11-21T22:56:12.560031+00:00",
+  "last_attempt_result": "success",
+  "interval_seconds": 7200,
+  "stale_after_seconds": 10800,
+  "source_health": [
+    {
+      "id": "K020",
+      "state": "complete",
+      "last_success_at": "2026-11-21T22:56:12.560031+00:00",
+      "checked_at": "2026-11-21T22:56:12.560031+00:00"
+    },
+    {
+      "id": "K034",
+      "state": "complete",
+      "last_success_at": "2026-11-21T22:56:12.560031+00:00",
+      "checked_at": "2026-11-21T22:56:12.560031+00:00"
+    },
+    {
+      "id": "K036",
+      "state": "complete",
+      "last_success_at": "2026-11-21T22:56:12.560031+00:00",
+      "checked_at": "2026-11-21T22:56:12.560031+00:00"
+    },
+    {
+      "id": "K073",
+      "state": "complete",
+      "last_success_at": "2026-11-21T22:56:12.560031+00:00",
+      "checked_at": "2026-11-21T22:56:12.560031+00:00"
+    },
+    {
+      "id": "K117",
+      "state": "complete",
+      "last_success_at": "2026-11-21T22:56:12.560031+00:00",
+      "checked_at": "2026-11-21T22:56:12.560031+00:00"
+    }
+  ]
+}
