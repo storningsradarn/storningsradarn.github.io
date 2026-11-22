@@ -1,12 +1,12 @@
 {
   "schema": "storningsradarn.latest.v1",
-  "generated_at": "2026-11-22T14:56:26.889778+00:00",
+  "generated_at": "2026-11-22T16:55:57.249439+00:00",
   "dataset_kind": "pilot",
   "snapshot": {
-    "path": "data/snapshots/21199736c30fc2ba920d75d96a3e67ee8021dd4ba513e683c1b11a2f70e753c1.json",
-    "sha256": "21199736c30fc2ba920d75d96a3e67ee8021dd4ba513e683c1b11a2f70e753c1",
+    "path": "data/snapshots/e02d771a1a13574b6358d62228f818837d84d2952456a28b5f534db2ef154afa.json",
+    "sha256": "e02d771a1a13574b6358d62228f818837d84d2952456a28b5f534db2ef154afa",
     "bytes": 971231,
-    "observed_at": "2026-11-22T14:56:26.889778+00:00",
+    "observed_at": "2026-11-22T16:55:57.249439+00:00",
     "summary": {
       "accepted_count": 713,
       "retained_missing_count": 2,
@@ -276,10 +276,37 @@
         "baseline": false,
         "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
       }
+    },
+    {
+      "path": "data/snapshots/e02d771a1a13574b6358d62228f818837d84d2952456a28b5f534db2ef154afa.json",
+      "sha256": "e02d771a1a13574b6358d62228f818837d84d2952456a28b5f534db2ef154afa",
+      "bytes": 971231,
+      "observed_at": "2026-11-22T16:55:57.249439+00:00",
+      "summary": {
+        "accepted_count": 713,
+        "retained_missing_count": 2,
+        "status_counts": {
+          "osäker": 3,
+          "pågående": 40,
+          "historisk": 11,
+          "planerad": 12,
+          "avslutad": 649
+        },
+        "source_counts": {
+          "K020": 11,
+          "K034": 3,
+          "K036": 651,
+          "K073": 12,
+          "K117": 36
+        },
+        "change_counts": {},
+        "baseline": false,
+        "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
+      }
     }
   ],
-  "last_success_at": "2026-11-22T14:56:26.889778+00:00",
-  "last_attempt_at": "2026-11-22T14:56:26.889778+00:00",
+  "last_success_at": "2026-11-22T16:55:57.249439+00:00",
+  "last_attempt_at": "2026-11-22T16:55:57.249439+00:00",
   "last_attempt_result": "success",
   "interval_seconds": 7200,
   "stale_after_seconds": 10800,
@@ -287,32 +314,32 @@
     {
       "id": "K020",
       "state": "complete",
-      "last_success_at": "2026-11-22T14:56:26.889778+00:00",
-      "checked_at": "2026-11-22T14:56:26.889778+00:00"
+      "last_success_at": "2026-11-22T16:55:57.249439+00:00",
+      "checked_at": "2026-11-22T16:55:57.249439+00:00"
     },
     {
       "id": "K034",
       "state": "complete",
-      "last_success_at": "2026-11-22T14:56:26.889778+00:00",
-      "checked_at": "2026-11-22T14:56:26.889778+00:00"
+      "last_success_at": "2026-11-22T16:55:57.249439+00:00",
+      "checked_at": "2026-11-22T16:55:57.249439+00:00"
     },
     {
       "id": "K036",
       "state": "complete",
-      "last_success_at": "2026-11-22T14:56:26.889778+00:00",
-      "checked_at": "2026-11-22T14:56:26.889778+00:00"
+      "last_success_at": "2026-11-22T16:55:57.249439+00:00",
+      "checked_at": "2026-11-22T16:55:57.249439+00:00"
     },
     {
       "id": "K073",
       "state": "complete",
-      "last_success_at": "2026-11-22T14:56:26.889778+00:00",
-      "checked_at": "2026-11-22T14:56:26.889778+00:00"
+      "last_success_at": "2026-11-22T16:55:57.249439+00:00",
+      "checked_at": "2026-11-22T16:55:57.249439+00:00"
     },
     {
       "id": "K117",
       "state": "complete",
-      "last_success_at": "2026-11-22T14:56:26.889778+00:00",
-      "checked_at": "2026-11-22T14:56:26.889778+00:00"
+      "last_success_at": "2026-11-22T16:55:57.249439+00:00",
+      "checked_at": "2026-11-22T16:55:57.249439+00:00"
     }
   ]
 }
