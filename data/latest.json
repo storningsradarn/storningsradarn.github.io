@@ -1,12 +1,12 @@
 {
   "schema": "storningsradarn.latest.v1",
-  "generated_at": "2026-11-22T18:56:34.998577+00:00",
+  "generated_at": "2026-11-22T20:56:16.731647+00:00",
   "dataset_kind": "pilot",
   "snapshot": {
-    "path": "data/snapshots/af9d3ddacb106f5f18235415bdd630ff55efb000c90f2ef3ebee98686b1741cf.json",
-    "sha256": "af9d3ddacb106f5f18235415bdd630ff55efb000c90f2ef3ebee98686b1741cf",
-    "bytes": 971624,
-    "observed_at": "2026-11-22T18:56:34.998577+00:00",
+    "path": "data/snapshots/e5ab9edd2ffc0cd64fe2efae42e656cc0ee76d126c84087cf928a416cd55fed7.json",
+    "sha256": "e5ab9edd2ffc0cd64fe2efae42e656cc0ee76d126c84087cf928a416cd55fed7",
+    "bytes": 971382,
+    "observed_at": "2026-11-22T20:56:16.731647+00:00",
     "summary": {
       "accepted_count": 712,
       "retained_missing_count": 3,
@@ -24,9 +24,7 @@
         "K073": 12,
         "K117": 35
       },
-      "change_counts": {
-        "missing_not_closed": 1
-      },
+      "change_counts": {},
       "baseline": false,
       "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
     }
@@ -334,10 +332,37 @@
         "baseline": false,
         "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
       }
+    },
+    {
+      "path": "data/snapshots/e5ab9edd2ffc0cd64fe2efae42e656cc0ee76d126c84087cf928a416cd55fed7.json",
+      "sha256": "e5ab9edd2ffc0cd64fe2efae42e656cc0ee76d126c84087cf928a416cd55fed7",
+      "bytes": 971382,
+      "observed_at": "2026-11-22T20:56:16.731647+00:00",
+      "summary": {
+        "accepted_count": 712,
+        "retained_missing_count": 3,
+        "status_counts": {
+          "osäker": 4,
+          "pågående": 39,
+          "historisk": 11,
+          "planerad": 12,
+          "avslutad": 649
+        },
+        "source_counts": {
+          "K020": 11,
+          "K034": 3,
+          "K036": 651,
+          "K073": 12,
+          "K117": 35
+        },
+        "change_counts": {},
+        "baseline": false,
+        "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
+      }
     }
   ],
-  "last_success_at": "2026-11-22T18:56:34.998577+00:00",
-  "last_attempt_at": "2026-11-22T18:56:34.998577+00:00",
+  "last_success_at": "2026-11-22T20:56:16.731647+00:00",
+  "last_attempt_at": "2026-11-22T20:56:16.731647+00:00",
   "last_attempt_result": "success",
   "interval_seconds": 7200,
   "stale_after_seconds": 10800,
@@ -345,32 +370,32 @@
     {
       "id": "K020",
       "state": "complete",
-      "last_success_at": "2026-11-22T18:56:34.998577+00:00",
-      "checked_at": "2026-11-22T18:56:34.998577+00:00"
+      "last_success_at": "2026-11-22T20:56:16.731647+00:00",
+      "checked_at": "2026-11-22T20:56:16.731647+00:00"
     },
     {
       "id": "K034",
       "state": "complete",
-      "last_success_at": "2026-11-22T18:56:34.998577+00:00",
-      "checked_at": "2026-11-22T18:56:34.998577+00:00"
+      "last_success_at": "2026-11-22T20:56:16.731647+00:00",
+      "checked_at": "2026-11-22T20:56:16.731647+00:00"
     },
     {
       "id": "K036",
       "state": "complete",
-      "last_success_at": "2026-11-22T18:56:34.998577+00:00",
-      "checked_at": "2026-11-22T18:56:34.998577+00:00"
+      "last_success_at": "2026-11-22T20:56:16.731647+00:00",
+      "checked_at": "2026-11-22T20:56:16.731647+00:00"
     },
     {
       "id": "K073",
       "state": "complete",
-      "last_success_at": "2026-11-22T18:56:34.998577+00:00",
-      "checked_at": "2026-11-22T18:56:34.998577+00:00"
+      "last_success_at": "2026-11-22T20:56:16.731647+00:00",
+      "checked_at": "2026-11-22T20:56:16.731647+00:00"
     },
     {
       "id": "K117",
       "state": "complete",
-      "last_success_at": "2026-11-22T18:56:34.998577+00:00",
-      "checked_at": "2026-11-22T18:56:34.998577+00:00"
+      "last_success_at": "2026-11-22T20:56:16.731647+00:00",
+      "checked_at": "2026-11-22T20:56:16.731647+00:00"
     }
   ]
 }
