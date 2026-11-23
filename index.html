@@ -21,6 +21,7 @@
 
 .source-county{display:inline-block;margin-left:4px;background:#f1f3f6;border:1px solid #d6dfe8;color:#485e70;font-size:10px;line-height:1.35;font-weight:700;letter-spacing:.01em;border-radius:5px;padding:2px 6px;white-space:nowrap}
 .data-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}.data-toolbar #dataState{margin-right:auto}.notice[data-error="true"]{background:#ffeded;color:#7c2020}.notice[data-stale="true"]{border:1px solid #c78522}@media(max-width:700px){.top{flex-wrap:wrap;gap:10px}.sample{margin-left:0;max-width:100%}.toolbar{align-items:flex-start}.tabs{flex-wrap:wrap}}
+.quick-filter{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0;padding:12px;background:#eaf3ff;border:1px solid #cfe1f5;border-radius:12px}.new-since-btn{font-weight:750;border:1px solid #1765aa;color:#175a9f;background:white}.new-since-btn[aria-pressed="true"]{background:#175a9f;color:white}.new-since-btn:disabled{opacity:.65;cursor:default}#newSinceCount{background:#dceeff;color:#164b83;padding:2px 9px;border-radius:999px;margin-left:6px}.new-since-btn[aria-pressed="true"] #newSinceCount{background:white;color:#175a9f}
 </style>
 </head>
 <body>
@@ -35,9 +36,10 @@
    <label>Län<select id="county"><option value="all">Alla län</option></select></label>
    <label>Kategori<select id="category"><option value="all">Alla kategorier</option></select></label>
    <label>Status<select id="status"><option value="all">Alla statusar</option></select></label>
-   <label>Publiceringsdatum<select id="date"><option value="all">Alla datum</option><option value="day">Insamlingsdagen</option><option value="week">Senaste 7 dagarna</option><option value="missing">Datum saknas</option></select></label>
+   <label>Datum<select id="date"><option value="all">Alla datum</option><option value="day">Publicerade idag hos källan</option><option value="first_day">Upptäckta idag</option><option value="week">Senaste 7 dagarna</option><option value="missing">Datum saknas</option></select></label>
    <button class="btn" id="clear" type="button">Rensa</button>
   </section>
+  <div class="quick-filter"><button id="newSinceLast" class="btn new-since-btn" type="button" disabled aria-pressed="false">Nya sedan förra hämtningen <span id="newSinceCount">–</span></button><span id="newSinceInfo" class="subnote">Först upptäckta vid den senaste jämförbara insamlingen.</span></div>
   <div class="filterfoot"><label class="check"><input type="checkbox" id="history"> Visa även historiska och avslutade ärenden</label><span class="subnote">Tidsfilter på timmar aktiveras när insamlaren har jämförbara publicerings- och upptäcktstider.</span></div>
  </div>
  <div id="heading" class="headline"><h1 id="headingText">Händelser per län</h1><span class="count" id="count">–</span></div>
