@@ -1,18 +1,18 @@
 {
   "schema": "storningsradarn.latest.v1",
-  "generated_at": "2026-11-23T06:56:22.535320+00:00",
+  "generated_at": "2026-11-23T08:56:43.028554+00:00",
   "dataset_kind": "pilot",
   "snapshot": {
-    "path": "data/snapshots/8388594366a192b499db4661834b1f453b3205e4b064f7751c441a78ab5341e8.json",
-    "sha256": "8388594366a192b499db4661834b1f453b3205e4b064f7751c441a78ab5341e8",
-    "bytes": 976693,
-    "observed_at": "2026-11-23T06:56:22.535320+00:00",
+    "path": "data/snapshots/4243fd17b2c8d5fee3fb2bb4aa30171a07b86397d3bc1f28cc27105e1980b72a.json",
+    "sha256": "4243fd17b2c8d5fee3fb2bb4aa30171a07b86397d3bc1f28cc27105e1980b72a",
+    "bytes": 978103,
+    "observed_at": "2026-11-23T08:56:43.028554+00:00",
     "summary": {
-      "accepted_count": 716,
+      "accepted_count": 717,
       "retained_missing_count": 3,
       "status_counts": {
         "osäker": 4,
-        "pågående": 43,
+        "pågående": 44,
         "historisk": 11,
         "planerad": 12,
         "avslutad": 649
@@ -22,10 +22,10 @@
         "K034": 3,
         "K036": 651,
         "K073": 12,
-        "K117": 39
+        "K117": 40
       },
       "change_counts": {
-        "new": 2
+        "new": 1
       },
       "baseline": false,
       "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
@@ -500,10 +500,39 @@
         "baseline": false,
         "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
       }
+    },
+    {
+      "path": "data/snapshots/4243fd17b2c8d5fee3fb2bb4aa30171a07b86397d3bc1f28cc27105e1980b72a.json",
+      "sha256": "4243fd17b2c8d5fee3fb2bb4aa30171a07b86397d3bc1f28cc27105e1980b72a",
+      "bytes": 978103,
+      "observed_at": "2026-11-23T08:56:43.028554+00:00",
+      "summary": {
+        "accepted_count": 717,
+        "retained_missing_count": 3,
+        "status_counts": {
+          "osäker": 4,
+          "pågående": 44,
+          "historisk": 11,
+          "planerad": 12,
+          "avslutad": 649
+        },
+        "source_counts": {
+          "K020": 11,
+          "K034": 3,
+          "K036": 651,
+          "K073": 12,
+          "K117": 40
+        },
+        "change_counts": {
+          "new": 1
+        },
+        "baseline": false,
+        "method": "cf7f65f37bd486ec17d21ca8e88f306b73324d4754d1ba1b35d5c39c826c1167"
+      }
     }
   ],
-  "last_success_at": "2026-11-23T06:56:22.535320+00:00",
-  "last_attempt_at": "2026-11-23T06:56:22.535320+00:00",
+  "last_success_at": "2026-11-23T08:56:43.028554+00:00",
+  "last_attempt_at": "2026-11-23T08:56:43.028554+00:00",
   "last_attempt_result": "success",
   "interval_seconds": 7200,
   "stale_after_seconds": 10800,
@@ -511,32 +540,32 @@
     {
       "id": "K020",
       "state": "complete",
-      "last_success_at": "2026-11-23T06:56:22.535320+00:00",
-      "checked_at": "2026-11-23T06:56:22.535320+00:00"
+      "last_success_at": "2026-11-23T08:56:43.028554+00:00",
+      "checked_at": "2026-11-23T08:56:43.028554+00:00"
     },
     {
       "id": "K034",
       "state": "complete",
-      "last_success_at": "2026-11-23T06:56:22.535320+00:00",
-      "checked_at": "2026-11-23T06:56:22.535320+00:00"
+      "last_success_at": "2026-11-23T08:56:43.028554+00:00",
+      "checked_at": "2026-11-23T08:56:43.028554+00:00"
     },
     {
       "id": "K036",
       "state": "complete",
-      "last_success_at": "2026-11-23T06:56:22.535320+00:00",
-      "checked_at": "2026-11-23T06:56:22.535320+00:00"
+      "last_success_at": "2026-11-23T08:56:43.028554+00:00",
+      "checked_at": "2026-11-23T08:56:43.028554+00:00"
     },
     {
       "id": "K073",
       "state": "complete",
-      "last_success_at": "2026-11-23T06:56:22.535320+00:00",
-      "checked_at": "2026-11-23T06:56:22.535320+00:00"
+      "last_success_at": "2026-11-23T08:56:43.028554+00:00",
+      "checked_at": "2026-11-23T08:56:43.028554+00:00"
     },
     {
       "id": "K117",
       "state": "complete",
-      "last_success_at": "2026-11-23T06:56:22.535320+00:00",
-      "checked_at": "2026-11-23T06:56:22.535320+00:00"
+      "last_success_at": "2026-11-23T08:56:43.028554+00:00",
+      "checked_at": "2026-11-23T08:56:43.028554+00:00"
     }
   ]
 }
