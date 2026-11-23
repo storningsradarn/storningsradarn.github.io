@@ -23,6 +23,7 @@ function walk(s,v){
   if([...v].length>(s.maxLength??100000))fail('För lång text.');
   if(s.pattern&&!new RegExp('^(?:'+s.pattern+')$','u').test(v))fail('Fel dataformat.');
   if(s.format==='date-time'&&(!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?(?:Z|[+-]\d\d:\d\d)$/.test(v)||!Number.isFinite(Date.parse(v))))fail('Ogiltig tidsstämpel.');
+  if(s.format==='source-date'&&(!/^\d{4}-\d\d-\d\d(?:T\d\d:\d\d:\d\d(?:\.\d+)?(?:Z|[+-]\d\d:\d\d))?$/.test(v)||!Number.isFinite(Date.parse(v))||new Date(v.slice(0,10)).toISOString().slice(0,10)!==v.slice(0,10)))fail('Ogiltigt källdatum.');
   if(s.format==='uri'&&!safeURL(v))fail('Otillåten källadress.');
  }
  if(['integer','number'].includes(actual)&&(!Number.isFinite(v)||v<(s.minimum??-Infinity)||v>(s.maximum??Infinity)))fail('Tal utanför tillåtet intervall.');
