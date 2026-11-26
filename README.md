@@ -1,10 +1,32 @@
 # Störningsradarn
 
-Webbplats för bevakning av kommunala driftstörningar i Sverige.
+Förberedd redaktionell översikt för organisationen storningsradarn.
+Webbadress: https://storningsradarn.github.io/
+Repository: storningsradarn/storningsradarn.github.io
+Administrerande konto: kaktahir, med rollen ägare i organisationen.
+Publiceringsgren: pages, rotmappen.
 
-- **Webbplatsfiler:** grenen `pages`.
-- **Planerad publik adress:** https://storningsradarn.github.io/
-- **Datakälla:** validerad JSON-export från den separata VPS-insamlaren.
-- **Status:** webbplatsens filer är förberedda, men ingen automatisk insamling eller publicering från VPS är aktiverad.
+## Data
 
-Webbplatsen visar inte gamla testdata som aktuella larm. GitHub Pages behöver aktiveras via repositoryts Settings → Pages med `pages` / `(root)`.
+Webbplatsen läser data/latest.json och validerade JSON-filer i data/snapshots.
+Sidan kontrollerar nya data varje minut när fliken är synlig. Insamlarens
+planerade intervall är två timmar. Efter tre timmar utan lyckad insamling
+markeras informationen som föråldrad. Sparade testdata märks alltid INTE LIVE.
+Ett misslyckat försök behåller föregående giltiga export.
+
+## Lokal öppning utan installation
+
+Packa upp hela mappen. Dubbelklicka på index.html. Välj Läs in JSON och öppna
+Sparade-testdata.json i leveranspaketet. Direktöppnade HTML-filer får normalt
+inte hämta JSON automatiskt; filväljaren är det avsiktliga lokala läget.
+Automatisk uppdatering testas när sidan serveras över HTTP eller HTTPS.
+Kartbakgrunden kräver internet och en webbläsare som stöder WebGL.
+Markörerna visar ungefärliga kommuncentrum, aldrig exakta händelseplatser.
+
+## Egna ärenden
+
+Mina ärenden lagras bara i denna webbläsares lokala lagring. De ingår inte i
+exporten eller publiceringen. Exportera en kopia för att flytta dem. Sparade
+ärenden under en lokal filadress följer inte automatiskt med till webbplatsen.
+
+Detta är förberedelsematerial, inte ett påstående om publicering eller pilotstart.
