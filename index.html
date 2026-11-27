@@ -142,15 +142,17 @@
 @media(max-width:850px){.compact-freshness{margin-left:0}.toolbar{align-items:flex-start}.compact-controls .new-since-btn{width:auto}.view-settings-pop{right:0}.compact-time{flex:1 1 100%;order:3}.compact-controls #newSinceNote{order:4}.headline h1{font-size:18px}}
 @media(max-width:450px){.compact-freshness>summary{gap:5px}.compact-freshness .freshness-chip{max-width:105px}.freshness-pop{left:0;right:auto}.view-settings-pop{max-width:calc(100vw - 32px)}.compact-controls{gap:6px}.compact-controls .new-since-btn{font-size:11px;padding:6px 8px}}
 
+
+/* Keep full collection status in the existing disclosure, not a separate banner. */
+.freshness-pop .notice{display:block;margin:9px 0 0;padding:7px 9px;white-space:normal;overflow-wrap:anywhere;line-height:1.45;font-size:12px;width:100%}.freshness-pop{width:360px;max-width:calc(100vw - 32px)}
 </style>
 </head>
 <body>
 <header class="top"><div class="brand"><span class="radar"></span>Störningsradarn</div><div class="strap">Kommunala driftstörningar</div><div class="sample">VÄNTAR PÅ DATA</div></header>
 <div class="container">
- <div class="notice" role="status" aria-live="polite">Läser publicerade data …</div>
  <nav class="toolbar" aria-label="Välj visning"><div class="tabs"><button class="tab active" data-view="regions" aria-pressed="true">▦ Länskort</button><button class="tab" data-view="feed" aria-pressed="false">☷ Händelser</button><button class="tab" data-view="map" aria-pressed="false">⌖ Karta</button><button class="tab" data-view="own" aria-pressed="false">✎ Mina ärenden <span id="ownCount"></span></button><button class="tab" data-view="control" aria-pressed="false">Insamlingskontroll</button><button class="tab" data-view="coverage" aria-pressed="false">Bevakningsluckor</button></div><details class="freshness-bar compact-freshness" id="freshnessBar" data-stale="false">
   <summary aria-label="Senaste insamling – visa detaljer"><span class="freshness-main"><span class="freshness-label">Senaste insamling</span><strong id="observed">Väntar på uppgifter</strong></span><span class="freshness-chip" id="freshnessChip" data-state="waiting">Väntar på data</span><span class="compact-chevron" aria-hidden="true">▾</span></summary>
-  <div class="freshness-pop"><div class="freshness-meta"><span id="fetchAge">Väntar på insamling</span><span id="lastAttempt">Senaste kontroll: –</span></div><p>Nationell pilotdrift · svensk tid. Kontrollera originalkällan.</p></div>
+  <div class="freshness-pop"><div class="freshness-meta"><span id="fetchAge">Väntar på insamling</span><span id="lastAttempt">Senaste kontroll: –</span></div><div class="notice" role="status" aria-live="polite">Läser publicerade data …</div></div>
  </details></nav>
  <div class="data-toolbar"><span id="dataState">Läser publicerade data …</span></div>
 <div id="filtersArea">
