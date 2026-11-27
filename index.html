@@ -96,19 +96,62 @@
 .geo-options,.geo-key{display:flex;flex-wrap:wrap;gap:10px 20px;margin:0 0 9px}.geo-options label,.geo-key span{display:inline-flex;align-items:center;gap:7px}.geo-options input{accent-color:#155da7;width:17px;height:17px}.geo-dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none}.geo-dot.confirmed{background:#0869cb}.geo-dot.hint{background:#a85b00}.geo-dot.county{background:#7547a5}.county-map-pin.geo-county{width:36px!important;height:36px!important}.county-bubble{display:grid;place-items:center;width:36px;height:36px;background:#7547a5;color:white;border:2px solid white;border-radius:50%;font-size:13px;font-weight:800;box-shadow:0 2px 6px #14213b66}.geo-county.selected .county-bubble{outline:3px solid #c5a7ec}.map-county-overview{padding:15px;background:white;border:1px solid #d5e6f4;border-radius:12px;margin:14px 0}.map-county-overview h2{margin:0;font-size:17px}.map-county-overview p{color:#526b83;font-size:12px;margin:5px 0 12px}.map-county-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:7px}.map-county-tile{display:flex;align-items:center;justify-content:space-between;gap:8px;text-align:left;background:#f4f8fc;border:1px solid #d5e6f4;border-radius:8px;padding:9px;color:#173b60;cursor:pointer}.map-county-tile b{font-size:16px}.map-county-tile[aria-pressed=true]{border-color:#7547a5;background:#eee5fa}.map-county-tile:focus-visible{outline:2px solid #155da7}.geo-hint.selected svg{filter:drop-shadow(0 2px 4px #a85b00)}
 
 .personal-tag{display:inline-block;background:#eee3fa;color:#582783;border:1px solid #c5a6e4;border-radius:7px;padding:2px 6px;font-size:11px;font-weight:700}.item.personal-item,.feed-card.personal-item,.own-entry.personal-item{background:#f7f0fc;border:1px solid #c8ace5;border-left:4px solid #793ca8}.personal-note{white-space:pre-wrap;overflow-wrap:anywhere;color:#526b83}.geo-dot.personal{background:#67289b;border:2px solid #d5b4ef;border-radius:3px}.personal-map-pin{display:inline-block;min-width:32px;white-space:nowrap;padding:4px 5px;border:2px solid white;border-radius:5px;background:#67289b;color:white;font-weight:800;box-shadow:0 2px 6px #14213b66}.geo-personal.selected .personal-map-pin{outline:3px solid #c5a7ec}
+
+/* V6.9 – compact editorial workspace. Keep source and freshness warnings visible. */
+.container{padding-top:12px}
+.notice{padding:6px 12px;margin-bottom:9px;font-size:12px;line-height:1.45}
+.toolbar{align-items:center;gap:8px 12px;margin-bottom:9px}
+.tabs{gap:5px}
+.tab{padding:8px 11px;font-size:13px}
+.compact-freshness{position:relative;display:block;margin:0 0 0 auto;padding:0;border-left-width:3px;border-radius:10px;flex:0 0 auto;max-width:100%;z-index:12;box-shadow:none}
+.compact-freshness>summary{display:flex;align-items:center;gap:8px;padding:6px 9px;cursor:pointer;list-style:none}
+.compact-freshness>summary::-webkit-details-marker,.view-settings>summary::-webkit-details-marker{display:none}
+.compact-freshness>summary:focus-visible,.view-settings>summary:focus-visible{outline:2px solid #1468bf;outline-offset:2px}
+.compact-freshness .freshness-main{min-width:0;gap:0;flex:0 1 auto}
+.compact-freshness .freshness-label{font-size:9px;line-height:1.25}
+.compact-freshness .freshness-main strong{font-size:13px;white-space:nowrap;line-height:1.4}
+.compact-freshness .freshness-chip{font-size:10px;padding:3px 7px;white-space:normal;line-height:1.3}
+.compact-chevron{font-size:11px;color:#527092}
+.freshness-pop,.view-settings-pop{position:absolute;right:0;top:calc(100% + 6px);z-index:20;background:#fff;border:1px solid #c9dff0;border-radius:10px;box-shadow:0 7px 22px #183d6429;padding:12px;min-width:250px;max-width:calc(100vw - 32px);width:max-content}
+.freshness-pop .freshness-meta{display:grid;gap:5px}
+.freshness-pop p{margin:8px 0 0;color:#61748b;font-size:11px}
+.filterbar{padding:8px 11px;gap:8px;margin-bottom:8px}
+.filterbar input,.filterbar select{min-height:34px;padding:6px 8px}
+.filterbar .btn{min-height:34px;padding:6px 11px}
+.compact-controls{display:flex;align-items:center;gap:6px 10px;margin-bottom:8px;padding:7px 9px;flex-wrap:wrap}
+.compact-controls .new-since-btn{width:auto;min-height:34px;padding:6px 10px;font-size:12px}
+.compact-time{display:flex;align-items:center;gap:6px;flex-wrap:wrap;flex:1 1 auto;min-width:0}
+.compact-time .map-period-list{gap:4px}
+.compact-time .map-period{min-height:32px;padding:6px 8px;font-size:12px}
+.compact-time #timeSelection:empty{display:none}
+.compact-controls #newSinceNote{flex:1 0 100%;min-width:0;font-size:11px;line-height:1.4}
+.compact-controls #newSinceNote[hidden]{display:none}
+.view-settings{position:relative;margin-left:auto;z-index:11}
+.view-settings>summary{display:flex;align-items:center;gap:7px;list-style:none;cursor:pointer;background:#fff;border:1px solid #cbd9e8;border-radius:8px;color:#234462;padding:7px 10px;font-size:12px;font-weight:720;white-space:nowrap}
+.view-settings-pop{display:grid;gap:9px;width:340px}
+.view-settings-pop p{margin:0;line-height:1.45}
+.headline{margin:4px 0 8px}
+.headline h1{font-size:19px}
+.map-county-overview{padding:11px 13px;margin:10px 0}
+.map-county-overview p{margin:3px 0 7px}
+.map-county-overview .map-summary{margin:7px 0;padding:7px 9px;gap:6px 9px}
+.map-county-overview .map-summary .map-note-small{font-size:11px}
+.map-county-overview #mapClearCounty{margin-bottom:7px}
+.map-geo-settings{margin-top:9px;margin-bottom:0;padding:9px 12px}
+.map-geo-settings .geo-options,.map-geo-settings .geo-key{margin-bottom:6px}
+@media(max-width:850px){.compact-freshness{margin-left:0}.toolbar{align-items:flex-start}.compact-controls .new-since-btn{width:auto}.view-settings-pop{right:0}.compact-time{flex:1 1 100%;order:3}.compact-controls #newSinceNote{order:4}.headline h1{font-size:18px}}
+@media(max-width:450px){.compact-freshness>summary{gap:5px}.compact-freshness .freshness-chip{max-width:105px}.freshness-pop{left:0;right:auto}.view-settings-pop{max-width:calc(100vw - 32px)}.compact-controls{gap:6px}.compact-controls .new-since-btn{font-size:11px;padding:6px 8px}}
+
 </style>
 </head>
 <body>
 <header class="top"><div class="brand"><span class="radar"></span>Störningsradarn</div><div class="strap">Kommunala driftstörningar</div><div class="sample">VÄNTAR PÅ DATA</div></header>
 <div class="container">
  <div class="notice" role="status" aria-live="polite">Läser publicerade data …</div>
- <section class="freshness-bar" id="freshnessBar" data-stale="false" aria-label="Information om senaste insamling">
-  <span class="freshness-icon" aria-hidden="true">↻</span>
-  <div class="freshness-main"><span class="freshness-label">Senaste insamling</span><strong id="observed">Väntar på uppgifter</strong></div>
-  <div class="freshness-meta"><span id="fetchAge">Väntar på insamling</span><span aria-hidden="true">·</span><span id="lastAttempt">Senaste kontroll: –</span></div>
-  <span class="freshness-chip" id="freshnessChip" data-state="waiting">Väntar på data</span>
- </section>
- <nav class="toolbar" aria-label="Välj visning"><div class="tabs"><button class="tab active" data-view="regions" aria-pressed="true">▦ Länskort</button><button class="tab" data-view="feed" aria-pressed="false">☷ Händelser</button><button class="tab" data-view="map" aria-pressed="false">⌖ Karta</button><button class="tab" data-view="own" aria-pressed="false">✎ Mina ärenden <span id="ownCount"></span></button><button class="tab" data-view="control" aria-pressed="false">Insamlingskontroll</button><button class="tab" data-view="coverage" aria-pressed="false">Bevakningsluckor</button></div><span class="subnote">Nationell pilotdrift · svensk tid</span></nav>
+ <nav class="toolbar" aria-label="Välj visning"><div class="tabs"><button class="tab active" data-view="regions" aria-pressed="true">▦ Länskort</button><button class="tab" data-view="feed" aria-pressed="false">☷ Händelser</button><button class="tab" data-view="map" aria-pressed="false">⌖ Karta</button><button class="tab" data-view="own" aria-pressed="false">✎ Mina ärenden <span id="ownCount"></span></button><button class="tab" data-view="control" aria-pressed="false">Insamlingskontroll</button><button class="tab" data-view="coverage" aria-pressed="false">Bevakningsluckor</button></div><details class="freshness-bar compact-freshness" id="freshnessBar" data-stale="false">
+  <summary aria-label="Senaste insamling – visa detaljer"><span class="freshness-main"><span class="freshness-label">Senaste insamling</span><strong id="observed">Väntar på uppgifter</strong></span><span class="freshness-chip" id="freshnessChip" data-state="waiting">Väntar på data</span><span class="compact-chevron" aria-hidden="true">▾</span></summary>
+  <div class="freshness-pop"><div class="freshness-meta"><span id="fetchAge">Väntar på insamling</span><span id="lastAttempt">Senaste kontroll: –</span></div><p>Nationell pilotdrift · svensk tid. Kontrollera originalkällan.</p></div>
+ </details></nav>
  <div class="data-toolbar"><span id="dataState">Läser publicerade data …</span></div>
 <div id="filtersArea">
   <section class="filterbar" aria-label="Filtrera händelser">
@@ -119,14 +162,19 @@
    <label>Publicerad / upptäckt<select id="date"><option value="all">Alla datum</option><option value="1h">Senaste timmen</option><option value="3h">Senaste tre timmarna</option><option value="12h">Senaste tolv timmarna</option><option value="24h">Senaste dygnet</option><option value="today">Idag (publicering eller observation)</option><option value="published_day">Publicerade idag hos källan</option><option value="discovered_day">Upptäckta idag av Störningsradarn</option><option value="week">Senaste 7 dagarna</option><option value="missing">Publiceringsdatum saknas</option></select></label>
    <button class="btn" id="clear" type="button">Rensa</button>
   </section>
-  <div class="quick-filters" aria-label="Snabbval för nya ärenden">
+  <div class="quick-filters compact-controls" aria-label="Snabbfilter och visningsalternativ">
     <button type="button" id="newSinceLast" class="btn new-since-btn" aria-pressed="false" disabled title="Väntar på en jämförbar insamling">Nya sedan förra hämtningen <span class="new-count" id="newSinceCount">–</span></button>
+    <section class="shared-time compact-time" id="sharedTimePanel" aria-label="Publicering eller första observation"><div class="map-period-list" id="sharedPeriods" role="group" aria-label="Tidsfilter"></div><span id="timeSelection" class="subnote"></span></section>
+    <details class="view-settings"><summary>⚙ Visning <span aria-hidden="true">▾</span></summary><div class="view-settings-pop">
+      <label class="check"><input type="checkbox" id="showOwn" checked> Visa mina egna ärenden</label>
+      <label class="check"><input type="checkbox" id="history"> Visa även historiska och avslutade ärenden</label>
+      <p class="subnote">Datum visas i svensk tid. Källans publicering och Störningsradarns observationstid är separata uppgifter.</p>
+      <p class="subnote">Tidsknappar och färger använder källans exakta publiceringstid. Om sådan saknas används första observation i Störningsradarn. Detta är inte ett nyhetsdatum. Tidsintervallen räknas från nu. För egna ärenden används tiden då du lade till dem. De ingår inte i insamlingens nyhets- och publiceringsfilter.</p>
+    </div></details>
     <span class="subnote" id="newSinceNote">Visar ärenden som Störningsradarn hittade för första gången vid senaste jämförbara insamlingen.</span>
   </div>
-  <div class="filterfoot"><label class="check"><input type="checkbox" id="showOwn" checked> Visa mina egna ärenden</label><label class="check"><input type="checkbox" id="history"> Visa även historiska och avslutade ärenden</label><span class="subnote">Datum visas i svensk tid. Källans publicering och Störningsradarns observationstid är separata uppgifter.</span></div>
  </div>
  <div id="heading" class="headline"><h1 id="headingText">Händelser per län</h1><span class="count" id="count">–</span></div>
- <section class="map-filter-panel shared-time" id="sharedTimePanel" aria-label="Gemensamt tidsfilter"><div class="map-filter-block"><div class="map-filter-label">Publicering / första observation – gäller alla tre vyer</div><div class="map-period-list" id="sharedPeriods" role="group" aria-label="Tidsfilter"></div></div><span id="timeSelection" class="subnote"></span><p class="map-note-small">Tidsknappar och färger använder källans exakta publiceringstid. Om sådan saknas används första observation i Störningsradarn. Detta är inte ett nyhetsdatum. Tidsintervallen räknas från nu. För egna ärenden används tiden då du lade till dem. De ingår inte i insamlingens nyhets- och publiceringsfilter.</p></section>
 <main id="main"><div class="empty">Väntar på validerade data …</div></main>
  <div class="footer">Nationell pilotdrift · Automatisk insamling · Karta från OpenFreeMap och OpenStreetMap vid internetanslutning</div>
 </div>
@@ -140,5 +188,5 @@
 <script src="live-data.js"></script>
 <script src="coverage-catalog.js"></script>
 <script src="coverage.js"></script>
-<script src="app.js?v=6.8"></script>
+<script src="app.js?v=6.9"></script>
 </body></html>
