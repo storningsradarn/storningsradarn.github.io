@@ -145,38 +145,133 @@
 
 /* Keep full collection status in the existing disclosure, not a separate banner. */
 .freshness-pop .notice{display:block;margin:9px 0 0;padding:7px 9px;white-space:normal;overflow-wrap:anywhere;line-height:1.45;font-size:12px;width:100%}.freshness-pop{width:360px;max-width:calc(100vw - 32px)}
+
+/* V7 – warm editorial palette, progressive disclosure and compact workspace */
+:root{--ink:#172b3b;--navy:#172b3b;--blue:#965508;--muted:#526171;--line:#dedbd7;--bg:#f4f2ef;--paper:#fff;--shadow:none;--copper:#965508;--copper-line:#b66e13;--copper-tint:#fcf1e0;--map-blue:#123f60;--focus:#965508}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+a{color:var(--copper)}
+[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.v7-header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:25}
+.v7-head-inner{max-width:1640px;padding:0 28px;margin:auto;display:flex;align-items:center;gap:22px;min-height:60px}
+.v7-brand{display:flex;align-items:center;gap:9px;font-weight:780;font-size:19px;letter-spacing:-.6px;white-space:nowrap}
+.v7-brand .radar{width:26px;height:26px;color:var(--copper);border-color:currentColor;border-width:2px}
+.v7-brand .radar:before{border-color:currentColor;border-width:2px;width:12px;height:12px}
+.v7-brand .radar:after{background:currentColor}
+.v7-nav{align-self:stretch;gap:2px;align-items:stretch}
+.v7-nav .tab{border:0;border-bottom:3px solid transparent;border-radius:0;padding:0 12px;background:transparent;color:var(--muted);font-size:13px;font-weight:650;white-space:nowrap}
+.v7-nav .tab.active{color:var(--copper);border-bottom-color:var(--copper-line)}
+.v7-nav .tab:hover:not(.active){background:#f7f3ed}
+.v7-head-right{display:flex;align-items:center;gap:8px;margin-left:auto}
+.v7-tools,.v7-filter-menu{position:relative}
+.v7-tools>summary,.v7-filter-menu>summary{list-style:none;cursor:pointer;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-weight:650;white-space:nowrap}
+.v7-tools>summary::-webkit-details-marker,.v7-filter-menu>summary::-webkit-details-marker{display:none}
+.v7-pop{position:absolute;right:0;top:calc(100% + 6px);z-index:35;width:300px;max-width:calc(100vw - 28px);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:13px;box-shadow:0 12px 30px #172b3b20;display:grid;gap:12px}
+.v7-tools .v7-pop{width:230px}.v7-tools .tab{text-align:left}.v7-tools .sample{white-space:normal;margin:0;color:#74511e;background:#fbf0df;border:0}
+.compact-freshness{margin:0;border:1px solid var(--line);background:var(--paper);box-shadow:none}.compact-freshness[data-stale=true]{border-color:#b66e13;background:#fff8eb}
+.compact-freshness>summary{padding:5px 8px;gap:7px}.compact-freshness .freshness-main strong{color:var(--ink);font-size:12px}.compact-freshness .freshness-label{color:var(--muted)}
+.freshness-pop,.view-settings-pop{border-color:var(--line);background:var(--paper);box-shadow:0 12px 30px #172b3b20}
+.v7-shell{max-width:1640px;padding:18px 28px 30px}
+.v7-hero{margin:0 0 15px;align-items:end}.v7-eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:10px;font-weight:750;color:var(--muted);margin-bottom:3px}
+.v7-hero h1{font-size:29px;letter-spacing:-.9px;line-height:1.15;font-weight:750}
+.headline .count{background:transparent;color:var(--muted);font-weight:550;padding:0}
+.v7-filterrow{display:flex;align-items:center;gap:9px;margin:0 0 10px;flex-wrap:wrap}
+.v7-search{display:flex;align-items:center;gap:9px;flex:1;min-width:220px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:7px 11px}
+.v7-search span{font-size:21px;color:var(--muted);line-height:1}.v7-search input{border:0;background:transparent;width:100%;min-width:0;outline:none!important;color:var(--ink)}
+.v7-search:focus-within{outline:2px solid var(--focus)}
+.v7-select select,.v7-pop select{max-width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);min-height:37px;font-size:13px}
+.v7-select{max-width:235px}.v7-date{max-width:195px}.v7-pop label{display:grid;gap:5px;font-weight:650;font-size:12px}.v7-pop .shared-time{display:block}.v7-pop .map-period-list{display:flex;flex-wrap:wrap}
+.v7-filter-menu,.view-settings{z-index:15}.view-settings{margin:0}.view-settings>summary{padding:8px 11px;border-color:var(--line);font-size:13px}
+.v7-metrics{display:flex;align-items:stretch;gap:20px;border-bottom:1px solid var(--line);margin:0 0 12px;overflow-x:auto;scrollbar-width:thin}
+.v7-metric{display:flex;align-items:baseline;gap:7px;border:0;border-bottom:3px solid transparent;background:transparent;white-space:nowrap;padding:6px 2px 10px;color:var(--muted);font-size:14px;font-weight:650}
+.v7-metric b{font-size:23px;letter-spacing:-.6px;font-variant-numeric:tabular-nums;color:var(--ink)}.v7-metric[aria-pressed=true]{color:var(--copper);border-color:var(--copper-line)}.v7-metric[aria-pressed=true] b{color:var(--copper)}.v7-metric:disabled{opacity:.55;cursor:default}
+.v7-new-note{display:block;margin:-6px 0 10px;font-size:11px;color:var(--muted)}
+.v7-filter-summary{margin:0 0 10px;color:var(--muted);font-size:12px}
+.map-period{background:#faf8f5;border-color:var(--line);color:var(--ink)}.map-period[aria-pressed=true]{background:var(--copper);border-color:var(--copper);box-shadow:none}
+.btn,.tiny-btn{color:var(--copper);background:var(--paper);border-color:var(--line)}.btn:hover,.tiny-btn:hover{background:var(--copper-tint)}.btn.blue{background:var(--copper);border-color:var(--copper);color:#fff}.btn.blue:hover{background:#744208}
+.map-layout{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:start}
+.map-layout.v7-overview{grid-template-columns:minmax(0,1.26fr) minmax(0,1fr)}
+.v7-overview .map-info{order:-1}
+.map-panel,.map-info{border:1px solid var(--line);border-radius:13px;background:var(--paper);overflow:hidden}
+.map-info{padding:0;container-type:inline-size}
+.v7-panelhead,.map-aside-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 17px;border-bottom:1px solid var(--line);margin:0}
+.v7-panelhead h2,.map-aside-head h2{font-size:17px;font-weight:750;letter-spacing:-.3px;margin:0;color:var(--ink)}
+.v7-panelhead p,.map-aside-head .summary-label{font-size:12px;color:var(--muted);margin:2px 0 0}
+.v7-overview .map-aside-list{max-height:590px}.map-aside-list{max-height:590px;scrollbar-color:#c8bdae transparent}
+.v7-editorial-list{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.v7-sectionhead{display:flex;align-items:center;gap:9px;padding:10px 16px 5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-size:10px;font-weight:750}
+.v7-sectionhead:after{content:"";height:1px;background:var(--line);flex:1}
+.v7-row{display:grid;grid-template-columns:29px minmax(0,1fr) auto;align-items:start;gap:11px;position:relative;padding:11px 15px;border-bottom:1px solid #e8e4df;background:var(--paper);cursor:pointer;min-width:0}
+.v7-row:hover{background:#faf6ef}.v7-row.is-new{background:#fcf8f2;box-shadow:inset 3px 0 var(--copper-line)}.v7-row.is-new:hover{background:#f9efdf}
+.v7-row.personal-item{background:#f8f2fc;box-shadow:inset 3px 0 #793ca8;border:0;border-bottom:1px solid #e8e4df}
+.v7-cat{display:grid;place-items:center;width:29px;height:29px;border-radius:7px;background:var(--copper-tint);color:var(--copper);font-size:16px}
+.v7-cat svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.personal-item .v7-cat{background:#eee3f7;color:#6b4394}
+.v7-row-main{min-width:0}.v7-row-title{font-size:15px;line-height:1.35;font-weight:720;color:var(--ink);overflow-wrap:anywhere;letter-spacing:-.12px}
+.v7-row-title button{font:inherit;text-align:left;background:none;border:0;padding:0;color:inherit;cursor:pointer}.v7-new-label{font-size:10px;color:var(--copper);font-weight:780;margin-right:5px;letter-spacing:.03em}
+.v7-row-meta{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:3px}.v7-row-alerts{display:flex;gap:3px 5px;flex-wrap:wrap;margin-top:3px}.v7-row-alerts:empty{display:none}
+.v7-row-end{display:grid;justify-items:end;gap:3px;max-width:125px;text-align:right;font-size:11px;color:var(--muted);line-height:1.35}
+.v7-row-end time{font-weight:650;font-variant-numeric:tabular-nums}.v7-row-end .pill{background:transparent;padding:0;border:0;font-size:11px;font-weight:750}
+.v7-row-end .pill.pågående{color:#a52e28}.v7-row-end .pill.planerad{color:#12665c}.v7-row-end .pill.osäker{color:#81540c}
+.v7-row .source-county,.v7-row .geo-mark,.v7-row .personal-tag,.v7-row .fresh-tag{font-size:10px;white-space:normal}
+.v7-row .fresh-tag{background:#f1ece5;color:#6e512f}
+.map-panel .real-map-shell{height:clamp(400px,55vh,600px);min-height:400px;border-radius:0;background:#eeeae5}
+.map-legend{background:#fffffff2;color:#43566a;font-size:10px}
+.map-county-overview{background:var(--paper);border-color:var(--line);padding:10px 13px}.map-county-overview h2{font-size:15px}.map-county-overview .map-summary{background:#f7f4ef;border-color:var(--line);color:var(--muted)}.map-summary strong{color:var(--ink)}.map-summary .map-note-small{color:var(--muted)}
+.map-county-tile{background:#faf8f5;border-color:var(--line);color:var(--ink)}.map-county-tile[aria-pressed=true]{background:var(--copper-tint);border-color:var(--copper-line);color:var(--copper)}
+.v7-map-disclosure>summary{cursor:pointer;color:var(--copper);font-size:13px;font-weight:700;list-style-position:inside}.v7-map-disclosure[open]>summary{margin-bottom:9px}
+.map-geo-settings{background:#f8f6f2;border-color:var(--line);color:var(--muted)}.geo-options input,.check input{accent-color:var(--copper)}
+.county,.item,.feed-card,.form-panel,.own-list{border-color:var(--line);box-shadow:none}.county-head{background:#f9f6f1;color:var(--ink)}.item.fresh-3,.item.fresh-2,.item.fresh-1{background:#fcf6ed;border-color:#e7d4b8}.item.fresh-3,.item.fresh-2,.item.fresh-1{border-left-color:var(--copper-line)!important}
+.modal-back{justify-content:flex-end;align-items:stretch;padding:0;background:#172b3b70;z-index:60}.modal-back .modal{width:min(580px,100%);max-width:580px;max-height:100dvh;border-radius:14px 0 0 14px;padding:25px;overflow:auto;box-shadow:-12px 0 35px #172b3b26}
+.modal-back.open .modal{animation:v7slide .18s ease-out}@keyframes v7slide{from{transform:translateX(20px);opacity:.7}to{transform:none;opacity:1}}
+@container(max-width:430px){.v7-row{grid-template-columns:25px minmax(0,1fr);padding:9px 11px;gap:7px}.v7-row-end{grid-column:2;display:flex;justify-content:space-between;max-width:none;text-align:left}.v7-cat{width:25px;height:25px}.v7-row-title{font-size:14px}}
+@media(min-width:1000px){.v7-overview .map-panel{position:sticky;top:76px}}
+@media(max-width:1100px){.v7-head-inner{flex-wrap:wrap;gap:7px 12px;padding:8px 18px 0}.v7-nav{order:3;flex:1 0 100%;height:38px;overflow-x:auto;flex-wrap:nowrap}.v7-shell{padding:15px 18px 24px}.v7-head-right{margin-left:auto}.v7-nav .tab{padding:0 10px}.v7-header{position:relative}}
+@media(max-width:760px){.v7-shell{padding:13px 12px 22px}.v7-brand{font-size:16px}.v7-head-inner{padding:8px 12px 0}.v7-head-right{gap:4px}.compact-freshness .freshness-chip{max-width:93px;font-size:9px}.compact-freshness .freshness-main strong{font-size:11px}.compact-freshness .freshness-label{font-size:8px}.v7-hero h1{font-size:25px}.v7-search{flex:1 0 100%;min-width:0}.v7-filterrow{gap:6px}.v7-select{max-width:45%}.v7-date{max-width:48%}.v7-metrics{display:grid;grid-template-columns:1fr 1fr;gap:0 12px;overflow:visible}.v7-metric{font-size:12px;white-space:normal;padding:5px 0 7px}.v7-metric b{font-size:20px}.map-layout,.map-layout.v7-overview{grid-template-columns:1fr}.map-panel .real-map-shell{height:410px;min-height:410px}.v7-overview .map-aside-list{max-height:440px}.freshness-pop{right:0;left:auto;width:290px}.view-settings-pop,.v7-pop{right:0}.v7-row-end{max-width:100px}}
+@media(prefers-reduced-motion:reduce){.modal-back.open .modal{animation:none}}
+
 </style>
 </head>
 <body>
-<header class="top"><div class="brand"><span class="radar"></span>Störningsradarn</div><div class="strap">Kommunala driftstörningar</div><div class="sample">VÄNTAR PÅ DATA</div></header>
-<div class="container">
- <nav class="toolbar" aria-label="Välj visning"><div class="tabs"><button class="tab active" data-view="regions" aria-pressed="true">▦ Länskort</button><button class="tab" data-view="feed" aria-pressed="false">☷ Händelser</button><button class="tab" data-view="map" aria-pressed="false">⌖ Karta</button><button class="tab" data-view="own" aria-pressed="false">✎ Mina ärenden <span id="ownCount"></span></button><button class="tab" data-view="control" aria-pressed="false">Insamlingskontroll</button><button class="tab" data-view="coverage" aria-pressed="false">Bevakningsluckor</button></div><details class="freshness-bar compact-freshness" id="freshnessBar" data-stale="false">
+<header class="v7-header">
+<div class="v7-head-inner">
+<div class="v7-brand"><span class="radar" aria-hidden="true"></span>Störningsradarn</div>
+<nav class="tabs v7-nav" aria-label="Välj visning">
+<button class="tab active" data-view="overview" aria-pressed="true">Översikt</button>
+<button class="tab" data-view="map" aria-pressed="false">Karta</button>
+<button class="tab" data-view="feed" aria-pressed="false">Händelser</button>
+<button class="tab" data-view="regions" aria-pressed="false">Län</button>
+<button class="tab" data-view="own" aria-pressed="false">Mina ärenden <span id="ownCount"></span></button>
+</nav>
+<div class="v7-head-right"><details class="freshness-bar compact-freshness" id="freshnessBar" data-stale="false">
   <summary aria-label="Senaste insamling – visa detaljer"><span class="freshness-main"><span class="freshness-label">Senaste insamling</span><strong id="observed">Väntar på uppgifter</strong></span><span class="freshness-chip" id="freshnessChip" data-state="waiting">Väntar på data</span><span class="compact-chevron" aria-hidden="true">▾</span></summary>
   <div class="freshness-pop"><div class="freshness-meta"><span id="fetchAge">Väntar på insamling</span><span id="lastAttempt">Senaste kontroll: –</span></div><div class="notice" role="status" aria-live="polite">Läser publicerade data …</div></div>
- </details></nav>
- <div class="data-toolbar"><span id="dataState">Läser publicerade data …</span></div>
+ </details><details class="v7-tools"><summary aria-label="Fler verktyg" title="Fler verktyg">☰</summary><div class="v7-pop"><span class="sample">VÄNTAR PÅ DATA</span><button class="tab" data-view="control" aria-pressed="false">Insamlingskontroll</button><button class="tab" data-view="coverage" aria-pressed="false">Bevakningsluckor</button></div></details></div>
+</div></header>
+<div class="container v7-shell">
+<div id="heading" class="headline v7-hero"><div><div class="v7-eyebrow">Kommunala driftstörningar</div><h1 id="headingText">Lägesbild Sverige</h1></div><span class="count" id="count">–</span></div>
+<div class="data-toolbar"><span id="dataState">Läser publicerade data …</span></div>
 <div id="filtersArea">
-  <section class="filterbar" aria-label="Filtrera händelser">
-   <label>Sök ärende eller plats<input type="search" id="search" placeholder="Sök på rubrik, ort eller kommun" autocomplete="off"></label>
-   <label>Län<select id="county"><option value="all">Alla län</option></select></label>
-   <label>Kategori<select id="category"><option value="all">Alla kategorier</option></select></label>
-   <label>Status<select id="status"><option value="all">Pågående och planerade</option></select></label>
-   <label>Publicerad / upptäckt<select id="date"><option value="all">Alla datum</option><option value="1h">Senaste timmen</option><option value="3h">Senaste tre timmarna</option><option value="12h">Senaste tolv timmarna</option><option value="24h">Senaste dygnet</option><option value="today">Idag (publicering eller observation)</option><option value="published_day">Publicerade idag hos källan</option><option value="discovered_day">Upptäckta idag av Störningsradarn</option><option value="week">Senaste 7 dagarna</option><option value="missing">Publiceringsdatum saknas</option></select></label>
-   <button class="btn" id="clear" type="button">Rensa</button>
-  </section>
-  <div class="quick-filters compact-controls" aria-label="Snabbfilter och visningsalternativ">
-    <button type="button" id="newSinceLast" class="btn new-since-btn" aria-pressed="false" disabled title="Väntar på en jämförbar insamling">Nya sedan förra hämtningen <span class="new-count" id="newSinceCount">–</span></button>
-    <section class="shared-time compact-time" id="sharedTimePanel" aria-label="Publicering eller första observation"><div class="map-period-list" id="sharedPeriods" role="group" aria-label="Tidsfilter"></div><span id="timeSelection" class="subnote"></span></section>
-    <details class="view-settings"><summary>⚙ Visning <span aria-hidden="true">▾</span></summary><div class="view-settings-pop">
+<section class="v7-filterrow" aria-label="Filtrera händelser">
+<label class="v7-search"><span aria-hidden="true">⌕</span><input type="search" id="search" aria-label="Sök ärende, kommun eller källa" placeholder="Sök ärende, kommun eller källa" autocomplete="off"></label>
+<label class="v7-select"><span class="sr-only">Län</span><select id="county"><option value="all">Alla län</option></select></label>
+<details class="v7-filter-menu"><summary>☷ Filter <span id="v7FilterCount"></span></summary><div class="v7-pop"><label>Kategori<select id="category"><option value="all">Alla kategorier</option></select></label><label>Status<select id="status"><option value="all">Pågående och planerade</option></select></label><section class="shared-time compact-time" id="sharedTimePanel" aria-label="Publicering eller första observation"><div class="map-period-list" id="sharedPeriods" role="group" aria-label="Tidsfilter"></div><span id="timeSelection" class="subnote"></span></section><button class="btn" id="clear" type="button">Rensa alla filter</button></div></details>
+<label class="v7-select v7-date"><span class="sr-only">Publicerad / upptäckt</span><select id="date"><option value="all">Alla datum</option><option value="1h">Senaste timmen</option><option value="3h">Senaste tre timmarna</option><option value="12h">Senaste tolv timmarna</option><option value="24h">Senaste dygnet</option><option value="today">Idag (publicering eller observation)</option><option value="published_day">Publicerade idag hos källan</option><option value="discovered_day">Upptäckta idag av Störningsradarn</option><option value="week">Senaste 7 dagarna</option><option value="missing">Publiceringsdatum saknas</option></select></label>
+<details class="view-settings"><summary>⚙ Visning <span aria-hidden="true">▾</span></summary><div class="view-settings-pop">
       <label class="check"><input type="checkbox" id="showOwn" checked> Visa mina egna ärenden</label>
       <label class="check"><input type="checkbox" id="history"> Visa även historiska och avslutade ärenden</label>
       <p class="subnote">Datum visas i svensk tid. Källans publicering och Störningsradarns observationstid är separata uppgifter.</p>
       <p class="subnote">Tidsknappar och färger använder källans exakta publiceringstid. Om sådan saknas används första observation i Störningsradarn. Detta är inte ett nyhetsdatum. Tidsintervallen räknas från nu. För egna ärenden används tiden då du lade till dem. De ingår inte i insamlingens nyhets- och publiceringsfilter.</p>
     </div></details>
-    <span class="subnote" id="newSinceNote">Visar ärenden som Störningsradarn hittade för första gången vid senaste jämförbara insamlingen.</span>
-  </div>
- </div>
- <div id="heading" class="headline"><h1 id="headingText">Händelser per län</h1><span class="count" id="count">–</span></div>
+</section>
+<div class="v7-metrics" aria-label="Snabbval">
+<button type="button" class="v7-metric" id="v7All" aria-pressed="false"><b id="v7AllCount">–</b> Alla i urvalet</button>
+<button type="button" id="newSinceLast" class="v7-metric" aria-pressed="true" disabled title="Först upptäckta vid senaste jämförbara insamlingen"><b id="newSinceCount">–</b> Senaste ärenden</button>
+<button type="button" class="v7-metric" id="v7Active" aria-pressed="false"><b id="v7ActiveCount">–</b> Pågående</button>
+<button type="button" class="v7-metric" id="v7Planned" aria-pressed="false"><b id="v7PlannedCount">–</b> Planerade</button>
+</div>
+<span class="subnote v7-new-note" id="newSinceNote" hidden></span>
+<div id="v7FilterSummary" class="v7-filter-summary" hidden></div>
+</div>
 <main id="main"><div class="empty">Väntar på validerade data …</div></main>
  <div class="footer">Nationell pilotdrift · Automatisk insamling · Karta från OpenFreeMap och OpenStreetMap vid internetanslutning</div>
 </div>
@@ -190,5 +285,5 @@
 <script src="live-data.js"></script>
 <script src="coverage-catalog.js"></script>
 <script src="coverage.js"></script>
-<script src="app.js?v=6.9"></script>
+<script src="app.js?v=7.0"></script>
 </body></html>
