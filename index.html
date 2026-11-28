@@ -248,6 +248,11 @@ a{color:var(--copper)}
 .v7-counties-menu{border-top:1px solid var(--line);padding:10px 13px}.v7-counties-menu>summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--copper)}.v7-county-menu-body{padding-top:10px}.v7-county-menu-body .map-county-grid{margin-top:8px;grid-template-columns:repeat(auto-fit,minmax(135px,1fr))}.v7-county-menu-body p{font-size:11px;color:var(--muted)}
 @media(max-width:760px){.v7-county-mapbox{height:410px}.v7-county-mapbox svg{padding:10px 24px}}
 @media(prefers-reduced-motion:reduce){.v7-county-shape{transition:none}}
+
+/* V7.2 – movable county map */
+.v7-county-mapbox svg{touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}
+.v7-county-mapbox svg:focus-visible{outline:2px solid #965508;outline-offset:-3px}
+.v7-county-mapbox svg.is-dragging,.v7-county-mapbox svg.is-dragging *{cursor:grabbing!important}
 </style>
 </head>
 <body>
@@ -305,5 +310,5 @@ a{color:var(--copper)}
 <script src="coverage-catalog.js"></script>
 <script src="coverage.js"></script>
 <script src="county-map.js?v=7.1"></script>
-<script src="app.js?v=7.1"></script>
+<script src="app.js?v=7.2"></script>
 </body></html>
